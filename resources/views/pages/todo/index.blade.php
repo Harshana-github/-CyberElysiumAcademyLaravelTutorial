@@ -45,7 +45,10 @@
                                             <span class="badge text-bg-success">Completed</span>
                                         @endif
                                     </td>
-                                    <td></td>
+                                    <td>
+                                        <a href="{{ route('todo.delete', $task->id) }}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+                                        <a href="{{ route('todo.done', $task->id) }}" class="btn btn-success"><i class="fa-solid fa-check"></i></a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
